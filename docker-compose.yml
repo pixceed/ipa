@@ -1,0 +1,28 @@
+services:
+  ubuntu_python:
+    build:
+      context: ./build
+      # args:
+      #   - HTTP_PROXY=$HTTP_PROXY
+      #   - http_proxy=$http_proxy
+      #   - HTTPS_PROXY=$HTTPS_PROXY
+      #   - https_proxy=$https_proxy
+    container_name: ipa_ct
+    privileged: true
+    volumes:
+      - ${PWD}:/home/ubuntu/workspace
+      - /tmp/.X11-unix/:/tmp/.X11-unix
+    environment:
+      # HTTP_PROXY: ${HTTP_PROXY}
+      # http_proxy: ${http_proxy}
+      # HTTPS_PROXY: ${HTTPS_PROXY}
+      # https_proxy: ${https_proxy}
+      TZ: Asia/Tokyo
+      DISPLAY: $DISPLAY
+      QT_X11_NO_MITSHM: '1'
+    devices:
+      - /dev/video0:/dev/video0:mwr
+    shm_size: '2gb'
+    stdin_open: true
+    tty: true
+    command: bash
