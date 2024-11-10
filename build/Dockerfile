@@ -25,7 +25,7 @@ RUN apt-get install -y python3.10
 RUN apt-get install -y --no-install-recommends python3-pip
 RUN apt-get install -y less vim sudo wget curl git zip unzip
 RUN apt-get install -y python-is-python3
-# RUN apt-get install -y libgl1-mesa-dev
+RUN apt-get install -y libgl1-mesa-dev
 RUN apt-get install -y libglib2.0-0
 
 ## 権限定義 ##

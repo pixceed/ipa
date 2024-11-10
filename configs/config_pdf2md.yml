@@ -1,0 +1,4 @@
+output_dir: "output"
+pdf_path: "input/2021r03h_nw_pm1_qs.pdf" 
+ans_pdf_path: "input/2021r03h_nw_pm1_ans.pdf" 
+split_page: [[2, 7], [8, 13], [14, 18]]
